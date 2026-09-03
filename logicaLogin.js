@@ -4,7 +4,7 @@ const form = document.getElementById("register-form");
 const formMessage = document.getElementById("form-message");
 
 // Función básica: revisa que ninguna casilla esté vacía
-
+// Si todo está lleno devuelve true, si falta algo devuelve false
 function validarCamposVacios() {
     const nombre = document.getElementById("nombre").value;
     const apellido = document.getElementById("apellido").value;
@@ -35,13 +35,14 @@ function validarFormato(){
     return false
 }
 
-//Funcion basica, mensaje de descuento si el e mail es @duocuc.cl
+//Funcion basica, mensaje de descuento si el email es @duocuc.cl
 function mensajeDescuento() {
     const correo = document.getElementById("email").value;
     if (correo.endsWith("@duocuc.cl")) {
         return true;
     }
 }
+
 
 // Evento submit del formulario
 form.addEventListener("submit", function (event) {
@@ -59,7 +60,6 @@ form.addEventListener("submit", function (event) {
         formMessage.textContent = "El correo o el teléfono no tienen el formato correcto";
         return;
     }   
-
-    // mensaje de éxito si todo está correcto
+    // Mensaje de registro
     formMessage.textContent = "Registro exitoso. ¡Bienvenido a Level-Up Gamer!";
 });
