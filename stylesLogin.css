@@ -1,0 +1,158 @@
+/* =======================================
+   LEVEL-UP GAMER - stylesLogin.css
+   ======================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =======================================
+   HEADER Y NAVEGACIÓN  
+   ======================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #000000;
+    border-bottom: 2px solid #1E90FF;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.logo .level-up {
+    color: #FFFFFF;
+}
+
+.logo .gamer {
+    color: #39FF14;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #1E90FF;
+}
+
+/* =======================================
+   FORMULARIO DE REGISTRO
+   ======================================= */
+.login {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #1E90FF;
+    padding: 30px;
+    text-align: center;
+}
+
+.register-card h2 {
+    color: #39FF14;
+    margin-bottom: 10px;
+}
+
+.register-subtitle {
+    color: #D3D3D3;
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group {
+    flex: 1;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #D3D3D3;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    border: 1px solid #D3D3D3;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    color-scheme: dark
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #1E90FF;
+}
+
+.btn-registrar {
+    width: 100%;
+    background-color: #1E90FF;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-registrar:hover {
+    background-color: #39FF14;
+    color: #000000;
+}
+
+.form-message {
+    margin-top: 15px;
+    color: #D3D3D3;
+}
+
+/* =======================================
+   FOOTER (igual que index.css)
+   ======================================= */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    border-top: 2px solid #1E90FF;
+    color: #D3D3D3;
+}
