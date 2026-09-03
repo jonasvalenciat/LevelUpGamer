@@ -4,7 +4,7 @@
     --accent-blue: #0088ff;
     --accent-green: #00ff00;
     --text-primary: #ffffff;
-    --text-secondary: #a0aab8;
+    --text-secondary: #d1d5db;
     --font-heading: 'Orbitron', sans-serif;
     --font-body: 'Roboto', sans-serif;
 }
@@ -15,20 +15,27 @@
     box-sizing: border-box;
 }
 
+/* FONDO GLOBAL EN TODA LA PÁGINA */
 body {
-    background-color: var(--bg-dark);
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), 
+                url('img/hero-bg.png') center/cover no-repeat fixed;
     color: var(--text-primary);
     font-family: var(--font-body);
+    line-height: 1.6;
 }
 
-/* --- ENCABEZADO Y NAVEGACIÓN --- */
+/* --- ENCABEZADO Y NAVEGACIÓN (TRANSPARENTE) --- */
 header {
-    background-color: #000000;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     border-bottom: 1px solid rgba(0, 136, 255, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
 }
 
 .logo {
@@ -61,21 +68,22 @@ nav a {
     font-weight: 700;
     font-size: 1rem;
     transition: color 0.2s ease;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
 
 nav a:hover {
     color: var(--accent-blue);
 }
 
-/* --- PORTADA / HERO (CENTRADO IGUAL A LA CAPTURA) --- */
+/* --- PORTADA / HERO (TRANSPARENTE) --- */
 .hero-portada {
-    background-color: var(--bg-dark);
-    min-height: 55vh;
+    min-height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
+    background: transparent;
 }
 
 .hero-content {
@@ -85,22 +93,19 @@ nav a:hover {
     align-items: center;
 }
 
-.hero-portada {
-  text-align: center;
-  padding: 8rem 1rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), 
-              url('img/hero-bg.png') center/cover no-repeat fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 60vh;
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    color: var(--text-primary);
+    text-shadow: 0 0 15px rgba(0, 136, 255, 0.8), 0 2px 4px rgba(0,0,0,0.9);
+    margin-bottom: 1rem;
 }
-
 
 .hero-subtitle {
     color: var(--text-primary);
     font-size: 1.15rem;
     margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
 }
 
 .btn-primary {
@@ -112,19 +117,21 @@ nav a:hover {
     padding: 14px 32px;
     border-radius: 6px;
     text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-primary:hover {
     background-color: #00cc00;
     transform: scale(1.03);
+    box-shadow: 0 0 15px var(--accent-green);
 }
 
-/* --- SECCIÓN DE CATEGORÍAS --- */
+/* --- SECCIÓN DE CATEGORÍAS (100% TRANSPARENTE) --- */
 .categories-section {
     padding: 60px 40px;
     max-width: 1200px;
     margin: 0 auto;
+    background: transparent;
 }
 
 .section-title {
@@ -133,6 +140,7 @@ nav a:hover {
     text-align: center;
     margin-bottom: 40px;
     color: var(--text-primary);
+    text-shadow: 0 0 10px rgba(0, 136, 255, 0.6), 0 2px 4px rgba(0,0,0,0.9);
 }
 
 .categories-grid {
@@ -142,17 +150,19 @@ nav a:hover {
 }
 
 .category-card {
-    background-color: #0d0d0d;
-    border: 1px solid rgba(0, 136, 255, 0.2);
+    background: rgba(0, 0, 0, 0.35); /* Fondo mínimo para no perder legibilidad */
+    border: 1px solid rgba(0, 136, 255, 0.4);
     padding: 28px 20px;
     border-radius: 8px;
     text-align: center;
-    transition: border-color 0.3s ease, transform 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
 .category-card:hover {
     border-color: var(--accent-green);
+    background: rgba(0, 0, 0, 0.6);
     transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
 }
 
 .category-card h3 {
@@ -160,17 +170,19 @@ nav a:hover {
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: var(--accent-blue);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
 }
 
 .category-card p {
-    color: var(--text-secondary);
+    color: #ffffff;
     font-size: 0.9rem;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9);
 }
 
-/* --- SECCIÓN COMUNIDAD Y VIDEO --- */
+/* --- SECCIÓN COMUNIDAD (100% TRANSPARENTE) --- */
 .community-section {
     padding: 60px 40px;
-    background-color: #000000;
+    background: transparent;
     border-top: 1px solid rgba(0, 136, 255, 0.2);
 }
 
@@ -194,22 +206,20 @@ nav a:hover {
     font-size: 1.4rem;
     color: var(--accent-green);
     margin-bottom: 14px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
 }
 
 .community-text p {
-    color: var(--text-secondary);
+    color: #ffffff;
     line-height: 1.6;
     margin-bottom: 16px;
-}
-
-.benefits-list {
-    list-style: none;
-    padding: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
 }
 
 .benefits-list li {
     margin-bottom: 10px;
     color: var(--text-primary);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
 }
 
 .video-container {
@@ -218,25 +228,7 @@ nav a:hover {
     aspect-ratio: 16 / 9;
 }
 
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-    border: 1px solid var(--accent-blue);
-    border-radius: 8px;
-    box-shadow: 0 0 16px rgba(0, 136, 255, 0.3);
-}
-
-/* --- PIE DE PÁGINA --- */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000000;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
-/* --- AJUSTES MULTIMEDIA PARA NUEVAS SECCIONES --- */
+.video-container iframe,
 .video-container img {
     width: 100%;
     height: 100%;
@@ -246,6 +238,13 @@ footer {
     box-shadow: 0 0 16px rgba(0, 136, 255, 0.3);
 }
 
-.video-container iframe {
-    box-shadow: 0 0 16px rgba(0, 136, 255, 0.3);
+/* --- PIE DE PÁGINA (TRANSPARENTE) --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9);
 }
