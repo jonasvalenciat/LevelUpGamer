@@ -1,0 +1,249 @@
+/* --- VARIABLES GLOBALES Y RESET --- */
+:root {
+    --bg-dark: #050505;
+    --accent-blue: #0088ff;
+    --accent-green: #00ff00;
+    --text-primary: #ffffff;
+    --text-secondary: #a0aab8;
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+}
+
+/* --- ENCABEZADO Y NAVEGACIÓN --- */
+header {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(0, 136, 255, 0.3);
+}
+
+.logo {
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.level-up {
+    color: #ffffff;
+}
+
+.gamer {
+    color: var(--accent-green);
+    margin-left: 5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--accent-blue);
+}
+
+/* --- PORTADA / HERO (CENTRADO IGUAL A LA CAPTURA) --- */
+.hero-portada {
+    background-color: var(--bg-dark);
+    min-height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-portada h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--accent-blue);
+    text-shadow: 0 0 15px rgba(0, 136, 255, 0.4);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero-subtitle {
+    color: var(--text-primary);
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: var(--accent-green);
+    color: #000000;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #00cc00;
+    transform: scale(1.03);
+}
+
+/* --- SECCIÓN DE CATEGORÍAS --- */
+.categories-section {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.category-card {
+    background-color: #0d0d0d;
+    border: 1px solid rgba(0, 136, 255, 0.2);
+    padding: 28px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.category-card:hover {
+    border-color: var(--accent-green);
+    transform: translateY(-4px);
+}
+
+.category-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--accent-blue);
+}
+
+.category-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* --- SECCIÓN COMUNIDAD Y VIDEO --- */
+.community-section {
+    padding: 60px 40px;
+    background-color: #000000;
+    border-top: 1px solid rgba(0, 136, 255, 0.2);
+}
+
+.community-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.community-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.community-text h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--accent-green);
+    margin-bottom: 14px;
+}
+
+.community-text p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.video-container {
+    flex: 1;
+    min-width: 300px;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--accent-blue);
+    border-radius: 8px;
+    box-shadow: 0 0 16px rgba(0, 136, 255, 0.3);
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* --- AJUSTES MULTIMEDIA PARA NUEVAS SECCIONES --- */
+.video-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid var(--accent-blue);
+    border-radius: 8px;
+    box-shadow: 0 0 16px rgba(0, 136, 255, 0.3);
+}
+
+.video-container iframe {
+    box-shadow: 0 0 16px rgba(0, 136, 255, 0.3);
+}
